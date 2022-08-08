@@ -16,7 +16,7 @@ import top.niunaijun.blackreflection.R;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = "MainActivity";
+    public static final String TAG = "BlackRef.MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
