@@ -11,7 +11,7 @@
 ### 准备
 
 #### Step 1. 根目录Gradle文件加入
-```gradle
+``` gradle
 allprojects {
     repositories {
         ...
@@ -21,14 +21,14 @@ allprojects {
 }
 ```
 #### Step 2. 需要使用的模块内引入
-```gradle
+``` gradle
 implementation 'com.github.CodingGay.BlackReflection:core:1.0.9'
 annotationProcessor 'com.github.CodingGay.BlackReflection:compiler:1.0.9'
 ```
 
 ### Demo
 #### 1. 如果你需要反射 top.niunaijun.app.bean.TestReflection 中的各种方法，参考：[MainActivity.java](https://github.com/CodingGay/BlackReflection/blob/main/app/src/main/java/top/niunaijun/app/MainActivity.java)
-```java
+``` java
 public class TestReflection {
     public static final String TAG = "TestConstructor";
 

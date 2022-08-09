@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "============================");
 
         // testInvokeContext
-        BRTestReflection.get(testReflection).testContextInvoke("context", 0);
-
+        String context = BRTestReflection.get(testReflection).testContextInvoke("context", 0);
+        Log.d(TAG, "testInvokeContext: " + context);
         Log.d(TAG, "============================");
 
         // testInvokeStatic
-        BRTestReflection.get().testStaticInvoke("static", 0);
-
+        String ss = BRTestReflection.get().testStaticInvoke("static", 0);
+        Log.d(TAG, "testInvokeStatic: " + ss);
         Log.d(TAG, "============================");
 
         // testGetContextField
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         Method currentActivityThread = clazz.getDeclaredMethod("currentActivityThread");
         currentActivityThread.setAccessible(true);
         Object invoke = currentActivityThread.invoke(null);
-//        Log.d(TAG, "testSystemReflection: " + invoke);
+        Log.d(TAG, "testSystemReflection: " + invoke);
     }
 
     private void testBlackReflection() throws Exception {
